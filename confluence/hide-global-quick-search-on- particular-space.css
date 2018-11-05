@@ -1,0 +1,7 @@
+/*
+The custom space styles will overwrite all global custom styles and theme styles.
+Navigate to Space Tools => Look and Feel => StyleSheet and paste the following CSS snippet:
+*/
+#quick-search{   
+    display:none;   
+}
