@@ -37,3 +37,4 @@ AJS.$(document).ready(function(){newField()});
 AJS.$(document).bind('dialogContentReady', function(event, dialog){newField()});
 AJS.$('#customfield_20700').change(function () {newField();});
 AJS.$('#customfield_20700\\:1').change(function () {newField();});
+newField();
