@@ -89,12 +89,12 @@ function newField(){
 }
 function getContent(){
 newField();
-AJS.$('#customfield_21729').change(function () {newField();});
-AJS.$('#customfield_21729\\:1').change(function () {newField();});
+AJS.$(document).on('change', '#customfield_21729',function () {newField();});
+AJS.$(document).on('change', '#customfield_21729\\:1',function () {newField();});
 }
 AJS.$(document).ready(function($){getContent();}); 
 AJS.$(document).bind('dialogContentReady', function(event, dialog){getContent()}); 
 newField();
-AJS.$('#customfield_21729').change(function () {newField();});
-AJS.$('#customfield_21729\\:1').change(function () {newField();});
+AJS.$(document).on('change', '#customfield_21729',function () {newField();});
+AJS.$(document).on('change', '#customfield_21729\\:1',function () {newField();});
 </script>
