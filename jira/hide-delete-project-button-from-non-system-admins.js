@@ -3,7 +3,7 @@ AJS.toInit(function () {
    AJS.$("#view_delete_project").hide();
    AJS.$(".delete-project").hide();    
    AJS.$.get("/rest/auth/1/session", function (data) {
-     userName = data.name
+     var userName = data.name
 	 AJS.$.get("/rest/api/latest/user", {username: userName, expand: "groups"}, function (data) {
 	   var groups = data.groups;
 	   var userGroups = jQuery.map(groups.items, function (val, j) { return val.name });
