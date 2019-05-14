@@ -18,8 +18,9 @@ AJS.toInit(function () {
 
 //another modification
 AJS.toInit(function () {  
- if (window.location.href.search("secure/project/BrowseProjects") > -1 || window.location.href.search("plugins/servlet/project-config/") > -1) {
+ if (window.location.href.search("secure/project/BrowseProjects") > -1 || window.location.href.search("plugins/servlet/project-config/") > -1
+    || window.location.href.search("/secure/project/ViewProjects") > -1) {
    AJS.$("#view_delete_project").hide();
-   AJS.$("#dropdown2-more-11700 > ul > li:nth-child(2)").css("display", "none");   
+   AJS.$(".delete-project").hide();    
  }
 }); 
