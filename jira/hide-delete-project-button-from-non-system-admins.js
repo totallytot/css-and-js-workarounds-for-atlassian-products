@@ -1,5 +1,6 @@
 AJS.toInit(function () {	
- if (window.location.href.endsWith("/secure/project/ViewProjects.jspa") || window.location.href.search("plugins/servlet/project-config/") > -1) {
+ if (window.location.href.search("secure/project/BrowseProjects") > -1 || window.location.href.search("plugins/servlet/project-config/") > -1
+    || window.location.href.search("/secure/project/ViewProjects") > -1) {
    AJS.$("#view_delete_project").hide();
    AJS.$(".delete-project").hide();    
    AJS.$.get("/rest/auth/1/session", function (data) {
@@ -13,14 +14,5 @@ AJS.toInit(function () {
        } 
      });
    });
- }
-}); 
-
-//another modification
-AJS.toInit(function () {  
- if (window.location.href.search("secure/project/BrowseProjects") > -1 || window.location.href.search("plugins/servlet/project-config/") > -1
-    || window.location.href.search("/secure/project/ViewProjects") > -1) {
-   AJS.$("#view_delete_project").hide();
-   AJS.$(".delete-project").hide();    
  }
 }); 
