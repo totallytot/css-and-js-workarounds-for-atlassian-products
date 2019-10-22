@@ -1,5 +1,3 @@
-
-
 <!-- Inserts div element for certain spaces after likes and label container -->
 <script>
 AJS.toInit(function(){
