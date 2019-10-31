@@ -1,7 +1,8 @@
+<!-- "Create sub-task" button for PCS project -->
 <script>
 function insertSubtaskCreationBtn() {
     let projectKey = JIRA.API.Projects.getCurrentProjectKey();
-    if (projectKey === "TNH") {
+    if (projectKey === "PCS") {
         let createSubtaskBtn = AJS.$('#opsbar-opsbar-admin').append("<button class='aui-button'>Create sub-task</button>");
         createSubtaskBtn.click(function() {
             let issueId = JIRA.Issue.getIssueId();
