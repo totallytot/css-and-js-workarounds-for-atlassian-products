@@ -3,7 +3,7 @@ AJS.toInit(function() {
         var affectedGroup = "SchaefferPoeschlClient";
         var affectedUser = AJS.params.loggedInUser;
         hideItemsForUserInCertainGroup(affectedUser, affectedGroup);
-        AJS.$(document).bind("dialogContentReady", function() { 
+        JIRA.bind("dialogContentReady", function() { 
             hideItemsForUserInCertainGroup(affectedUser, affectedGroup); 
         });
         JIRA.bind(JIRA.Events.NEW_CONTENT_ADDED, function () { 
