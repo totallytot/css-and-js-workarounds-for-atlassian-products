@@ -1,13 +1,11 @@
 AJS.toInit(function() {
-    if (window.location.href.includes("/browse/")) {
+    if (window.location.href.includes("/browse/HAUFE")) {
         var affectedGroup = "SchaefferPoeschlClient";
         var affectedUser = AJS.params.loggedInUser;
         hideItemsForUserInCertainGroup(affectedUser, affectedGroup);
-
-        AJS.$(document).bind('dialogContentReady', function() { 
+        AJS.$(document).bind("dialogContentReady", function() { 
             hideItemsForUserInCertainGroup(affectedUser, affectedGroup); 
         });
-        
         JIRA.bind(JIRA.Events.NEW_CONTENT_ADDED, function () { 
             hideItemsForUserInCertainGroup(affectedUser, affectedGroup); 
         });
@@ -28,9 +26,9 @@ function hideItemsForUserInCertainGroup(user, group) {
 function getUserGroups(user) {
     let groups = null;
     AJS.$.ajax({
-        url: "/rest/api/latest/user?username="+user+"&expand=groups",
-        type: 'get',
-        dataType: 'json',
+        url: "/rest/api/latest/user?username=" + user + "&expand=groups",
+        type: "get",
+        dataType: "json",
         async: false,
         success: function(data) { groups = data.groups.items; }
     });
