@@ -1,0 +1,6 @@
+.sd-queue-table-body > .queue-react-table-container > div > div > div > table > tbody > tr {
+    border-bottom: 2px solid #DFE1E6 !important;
+}
+.sd-queue-table-body > .queue-react-table-container > div > div > div > table > tbody > tr:hover {
+    border: 3px solid #DFE1E6 !important;
+}
